@@ -1,0 +1,39 @@
+.wrapper {
+  padding: 6%;
+}
+
+.title {
+  color: #52ebd2;
+  font-size: 2rem;
+}
+
+.title::after {
+  content: " ";
+  display: block;
+  border: 1px solid #01acea;
+  border-radius: 50%;
+}
+
+.text {
+  color: #686868;
+  text-align: justify;
+}
+
+.text::after {
+  content: " ";
+  display: block;
+  border: 1px solid #01acea;
+  border-radius: 50%;
+  margin: 0 0 5%;
+}
+
+@media(min-width: 1024px){
+  .wrapper {
+    width: 1024px;
+    font-size: 1.8rem;
+    margin: 0 auto;
+  }
+  .title {
+    font-size: 2.6rem;
+  }
+}

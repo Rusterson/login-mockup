@@ -1,0 +1,35 @@
+.wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #f7f7f7;
+}
+
+.box {
+  background: #ffffff;
+  margin: 0 5%;
+  border: 1px solid #ffffff;
+  box-shadow: 5px 5px 0 0 #e0e0e026;
+}
+/* .boxOne {
+  margin-bottom: 5%;
+} */
+
+@media (min-width: 1024px) {
+  /* .boxOne {
+    margin: 0 auto;
+    border-right: 1px solid #01acea;
+    padding: 3%;
+  } */
+  .box {
+    padding: 10px;
+    display: flex;
+  }
+  /* .boxTwo {
+    margin: auto 0 auto 10px;
+    width: 300px;
+  } */
+}

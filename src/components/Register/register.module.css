@@ -1,0 +1,87 @@
+.wrapper {
+  margin: 0 5%;
+}
+.title {
+  font-size: 2rem;
+  color: #5fcace;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 5%;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: #0377a1;
+  font-size: 1.4rem;
+  margin: 5% 0 0;
+}
+
+.field label {
+  text-align: left;
+  display: block;
+}
+
+.field input {
+  background: #0000000a;
+  border: 1px solid #5fcace;
+  color: #696969;
+  font-size: 1.4rem;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: #5fcace;
+  box-shadow: 0 0 1px 1px #52ebd2;
+}
+
+.fieldTerms {
+  margin: 5% 0 0;
+  font-size: 0.7rem;
+}
+
+.fieldTerms label {
+  margin: 0 0 0 5px;
+  align-content: center;
+  vertical-align: 3px;
+  color: #696969;
+}
+
+.fieldTerms a {
+  text-decoration: underline;
+}
+
+.button {
+  cursor: pointer;
+  font-family: "El messiri";
+  margin: 5% 0 0;
+  font-size: 1.2rem;
+  padding: 0 5%;
+  color: #0377a1;
+  background: radial-gradient(#56efd15c, #01acea5c);
+  border: none;
+  transition: all 220ms;
+  outline: 0px;
+}
+.button:hover {
+  background: radial-gradient(#01acea75, #56efd175);
+  transform: translate3d(3px, -2px, 0);
+  box-shadow: -2px 2px 1px 1px #69696926;
+}
+
+.wrapper span {
+  font-size: .9rem;
+  color: #696969;
+}
+
+.wrapper span a {
+  text-decoration: underline;
+  color: #01acea;
+}

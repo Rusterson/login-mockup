@@ -1,0 +1,60 @@
+.wrapper {
+  width: 100%;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  height: 80vh;
+  justify-content: space-around;
+}
+
+.title {
+  color: #52ebd2;
+  font-size: 2.5rem;
+}
+
+.wellcome {
+  color: #095694a1;
+  margin: 0 1%;
+  font-size: 1.9rem;
+}
+
+.logo {
+  margin: 5% 0;
+  display: block;
+  width: 125px;
+  height: 125px;
+}
+
+.links {
+  font-size: 1.3rem;
+  color: #696969;
+}
+
+.links a {
+  text-decoration: underline;
+  color: #01acea;
+}
+
+@media(min-width: 1024px){
+  .box {
+    width: 70vw;
+    height: 70vh;
+  }
+  .wellcome {
+    font-size: 2.9rem;
+  }
+  .logo {
+    margin: 0;
+    width: 300px;
+    height: 300px;
+  }
+  .title {
+    font-size: 3.5rem;
+  }
+  .links {
+    font-size: 1.6rem;
+  }
+}

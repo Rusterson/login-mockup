@@ -1,0 +1,49 @@
+.wrapper {
+  margin-bottom: 5%;
+}
+
+.box {
+  width: 100%;
+}
+
+.box img {
+  width: 70px;
+  margin: 0 0 -20px;
+}
+.title {
+  color: #52ebd2;
+  font-size: 2.5rem;
+}
+
+.subTitle {
+  color: #095694a1;
+  margin: 0 5px;
+  font-size: 1.3rem;
+}
+
+.text {
+  display: none;
+  font-size: .9rem;
+  color: #696969;
+}
+
+@media(min-width: 1024px){
+  .wrapper {
+    margin: 0 auto;
+    border-right: 1px solid #01acea;
+    padding: 3%;
+  }
+  .text {
+    display: block;
+  }
+  .text {
+    text-align: justify;
+    padding: 5%;
+  }
+  
+  .textBox {
+    width: 450px;
+    padding: 0 5%;
+  }
+
+}

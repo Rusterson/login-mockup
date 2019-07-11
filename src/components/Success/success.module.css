@@ -1,0 +1,42 @@
+.wrapper {
+  margin: 0 5%;
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.title {
+  color: #52ebd2;
+  font-size: 2.5rem;
+}
+
+.button {
+  cursor: pointer;
+  font-family: "El messiri";
+  margin: 5% 0 0;
+  font-size: 1.2rem;
+  padding: 0 5%;
+  color: #0377a1;
+  background: radial-gradient(#56efd15c, #01acea5c);
+  border: none;
+  transition: all 220ms;
+  outline: 0px;
+}
+.button:hover {
+  background: radial-gradient(#01acea75, #56efd175);
+  transform: translate3d(2px, -1px, 0);
+  box-shadow: -1px 1px 1px 1px #69696926;
+}
+
+@media(min-width: 1024px){
+  .wrapper {
+    width: 75vw;
+    height: 75vh;
+  }
+  .title {
+    font-size: 3.5rem;
+  }
+}

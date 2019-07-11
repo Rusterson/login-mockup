@@ -1,0 +1,86 @@
+.box {
+  margin: 0 5%;
+  padding: 0 0 5% 0;
+}
+.title {
+  font-size: 1.6rem;
+  color: #5fcace;
+}
+
+.text {
+  color: #696969;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form label {
+  color: #0377a1;
+  font-size: 1.4rem;
+  margin: 5% 0 0;
+}
+
+.form input {
+  position: relative;
+  background: #0000000a;
+  border: 1px solid #5fcace;
+  color: #696969;
+  font-size: 1.4rem;
+  padding-left: 10px;
+  width: 100%;
+  padding-right: 23px;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #5fcace;
+  box-shadow: 0 0 1px 1px #52ebd2;
+}
+
+.field {
+  position: relative;
+}
+
+.icoEmail {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  bottom: 2px;
+  right: 4px;
+  margin: auto 0;
+  fill: #5fcace !important;
+  opacity: 0.4;
+}
+
+.form input:focus + .icoEmail {
+  opacity: 1;
+}
+
+.button {
+  cursor: pointer;
+  font-family: "El messiri";
+  margin: 5% 0 0;
+  font-size: 1.2rem;
+  padding: 0 5%;
+  color: #0377a1;
+  background: radial-gradient(#56efd15c, #01acea5c);
+  border: none;
+  transition: all 220ms;
+  outline: 0px;
+}
+.button:hover {
+  background: radial-gradient(#01acea75, #56efd175);
+  transform: translate3d(3px, -2px, 0);
+  box-shadow: -2px 2px 1px 1px #69696926;
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    margin: auto 0 auto 10px;
+    width: 300px;
+  }
+}

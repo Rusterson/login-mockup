@@ -1,0 +1,121 @@
+.box {
+  margin: 0 5%;
+}
+
+.box form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2rem;
+  color: #5fcace;
+}
+
+.boxLabel {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: #0377a1;
+  font-size: 1.4rem;
+  margin: 5% 0 0;
+}
+
+.inputField {
+  position: relative;
+}
+.inputField input {
+  position: relative;
+  background: #0000000a;
+  border: 1px solid #5fcace;
+  color: #696969;
+  font-size: 1.4rem;
+  padding-left: 10px;
+  padding-right: 20px;
+  width: 100%;
+}
+
+.inputField input:focus {
+  outline: none;
+  border-color: #5fcace;
+  box-shadow: 0 0 1px 1px #52ebd2;
+}
+.inputField input::placeholder {
+  font-size: 1rem;
+  opacity: 0.5;
+}
+
+.inputField input:focus::placeholder {
+  opacity: 0;
+}
+
+.inputField input:focus + .userSvg,
+.inputField input:focus + .passSvg {
+  opacity: 1;
+}
+.passSvg,
+.userSvg {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  bottom: 3px;
+  right: 2px;
+  margin: auto 0;
+  fill: #5fcace;
+  opacity: 0.4;
+}
+
+.forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.forgotPass a {
+  font-size: 0.6rem;
+  color: #818181;
+}
+
+.errorInput {
+  border: 2px solid red;
+}
+
+.errorText {
+  color: red;
+  font-size: 0.6rem;
+}
+
+.button {
+  cursor: pointer;
+  font-family: "El messiri";
+  margin: 5% 0 0;
+  font-size: 1.2rem;
+  padding: 0 5%;
+  color: #0377a1;
+  background: radial-gradient(#56efd15c, #01acea5c);
+  border: none;
+  transition: all 220ms;
+  outline: 0px;
+}
+.button:hover {
+  background: radial-gradient(#01acea75, #56efd175);
+  transform: translate3d(2px, -1px, 0);
+  box-shadow: -1px 1px 1px 1px #69696926;
+}
+
+.register {
+  margin: 5% 0;
+}
+
+.register a {
+  text-decoration: underline;
+  color: #01acea;
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    margin: auto 0 auto 10px;
+    width: 300px;
+  }
+}
