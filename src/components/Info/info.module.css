@@ -23,11 +23,11 @@
 
 .text {
   display: none;
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: #696969;
 }
 
-@media(min-width: 1024px){
+@media (min-width: 1024px) {
   .wrapper {
     margin: 0 auto;
     border-right: 1px solid #01acea;
@@ -40,10 +40,9 @@
     text-align: justify;
     padding: 5%;
   }
-  
+
   .textBox {
     width: 450px;
     padding: 0 5%;
   }
-
 }

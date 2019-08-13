@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./success.module.css";
 import { logout, isAuthenticated } from "../Login/auth";
-import { withRouter } from 'react-router-dom'
+import { withRouter } from "react-router-dom";
 
 function Success(props) {
   function handleLogout() {

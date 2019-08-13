@@ -6,7 +6,7 @@ function Reset() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.box}>
-        <h3 className={styles.title} >Reset Your Password</h3>
+        <h3 className={styles.title}>Reset Your Password</h3>
         <p className={styles.text}>
           Enter the email you use for your Brain account.
         </p>

@@ -20,7 +20,6 @@ function App() {
           <Route path="/forgot-password" component={PageForgotPassword} />
           <Route path="/register" component={PageRegister} />
           <PrivateRoute path="/success" exact component={PageSuccess} />
-          {/* <Route path="/success" component={PageSuccess} /> */}
           <Route path="/privacy-policy" component={PagePrivacy} />
           <Route path="/terms-of-use" component={PageTerms} />
         </Switch>

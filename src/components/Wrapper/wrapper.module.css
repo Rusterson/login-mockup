@@ -14,22 +14,10 @@
   border: 1px solid #ffffff;
   box-shadow: 5px 5px 0 0 #e0e0e026;
 }
-/* .boxOne {
-  margin-bottom: 5%;
-} */
 
 @media (min-width: 1024px) {
-  /* .boxOne {
-    margin: 0 auto;
-    border-right: 1px solid #01acea;
-    padding: 3%;
-  } */
   .box {
     padding: 10px;
     display: flex;
   }
-  /* .boxTwo {
-    margin: auto 0 auto 10px;
-    width: 300px;
-  } */
 }

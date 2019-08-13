@@ -3,7 +3,6 @@ import { isAuthenticated } from "../Login/auth";
 import { Route, Redirect } from "react-router-dom";
 
 function PrivateRoute({ component: Component, ...rest }) {
-  console.log(isAuthenticated())
   return (
     <Route
       {...rest}
@@ -19,4 +18,4 @@ function PrivateRoute({ component: Component, ...rest }) {
     />
   );
 }
-export default PrivateRoute
+export default PrivateRoute;

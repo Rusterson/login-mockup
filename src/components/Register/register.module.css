@@ -1,6 +1,7 @@
 .wrapper {
   margin: 0 5%;
 }
+
 .title {
   font-size: 2rem;
   color: #5fcace;
@@ -77,7 +78,7 @@
 }
 
 .wrapper span {
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: #696969;
 }
 

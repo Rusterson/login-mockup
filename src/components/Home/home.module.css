@@ -1,6 +1,7 @@
 .wrapper {
   width: 100%;
 }
+
 .box {
   display: flex;
   flex-direction: column;
@@ -38,7 +39,7 @@
   color: #01acea;
 }
 
-@media(min-width: 1024px){
+@media (min-width: 1024px) {
   .box {
     width: 70vw;
     height: 70vh;

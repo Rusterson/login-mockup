@@ -4,7 +4,6 @@ import { ReactComponent as Pass } from "../../assets/icons/pass.svg";
 import { ReactComponent as User } from "../../assets/icons/user.svg";
 import { Link, withRouter } from "react-router-dom";
 import useFormValidation from "./useFormValidation";
-// import validateAuth from "./validateAuth";
 import { login } from "./auth";
 
 const INITIAL_STATE = {
@@ -14,10 +13,8 @@ const INITIAL_STATE = {
 
 function Login(props) {
   const { handleChange, values } = useFormValidation(INITIAL_STATE);
-  // init test
   const [errors, setErrors] = React.useState({});
 
-  // console.log(errors);
   let error = {};
   function handleSubmit(e) {
     e.preventDefault();
@@ -38,8 +35,7 @@ function Login(props) {
       api();
     }
   }
-  //end test
-  // console.log(values)
+
   async function api() {
     fetch("https://reqres.in/api/login", {
       method: "POST",
@@ -53,12 +49,10 @@ function Login(props) {
       )
     })
       .then(function(res) {
-        // console.log(res.status," res.statusText, res.headers, res.url");
         return res.json();
       })
       .then(
         await function(data) {
-          // console.log("token", data.token);
           if (data.token) {
             login(data.token);
             props.history.push("/success");
@@ -67,12 +61,9 @@ function Login(props) {
             error.api = "*" + data.error;
             setErrors(error);
           }
-          // console.log("Req Success :", data);
         }
       )
-      .catch(function(error) {
-        // console.log("Req failure", error);
-      });
+      .catch(function(error) {});
   }
 
   return (

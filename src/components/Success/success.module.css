@@ -25,13 +25,14 @@
   transition: all 220ms;
   outline: 0px;
 }
+
 .button:hover {
   background: radial-gradient(#01acea75, #56efd175);
   transform: translate3d(2px, -1px, 0);
   box-shadow: -1px 1px 1px 1px #69696926;
 }
 
-@media(min-width: 1024px){
+@media (min-width: 1024px) {
   .wrapper {
     width: 75vw;
     height: 75vh;
