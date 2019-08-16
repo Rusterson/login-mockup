@@ -1,5 +1,5 @@
 import React from "react";
-import { isAuthenticated } from "../Login/auth";
+import { isAuthenticated } from "../../services/auth";
 import { Route, Redirect } from "react-router-dom";
 
 function PrivateRoute({ component: Component, ...rest }) {

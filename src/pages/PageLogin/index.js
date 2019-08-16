@@ -1,7 +1,7 @@
 import React from "react";
-import Wrapper from "../../../components/Wrapper";
-import Login from "../../../components/Login";
-import Info from "../../../components/Info";
+import Wrapper from "../../components/Wrapper";
+import Login from "../../components/Login";
+import Info from "../../components/Info";
 
 function PageLogin() {
   return (

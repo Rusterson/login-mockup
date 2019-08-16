@@ -1,14 +1,15 @@
 import React from "react";
 import "./App.css";
-import PageHome from "./assets/pages/PageHome";
-import PageLogin from "./assets/pages/PageLogin";
-import PageForgotPassword from "./assets/pages/PageForgotPassword";
-import PageRegister from "./assets/pages/PageRegister";
-import PageSuccess from "./assets/pages/PageSuccess";
-import PagePrivacy from "./assets/pages/PagePrivacy";
-import PageTerms from "./assets/pages/PageTerms";
+import PageHome from "./pages/PageHome";
+import PageLogin from "./pages/PageLogin";
+import PageForgotPassword from "./pages/PageForgotPassword";
+import PageRegister from "./pages/PageRegister";
+import PageSuccess from "./pages/PageSuccess";
+import PagePrivacy from "./pages/PagePrivacy";
+import PageTerms from "./pages/PageTerms";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
+import PageRegisterSuccess from './pages/PageRegisterSuccess'
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
           <Route path="/forgot-password" component={PageForgotPassword} />
           <Route path="/register" component={PageRegister} />
           <PrivateRoute path="/success" exact component={PageSuccess} />
+          {/* <Route path="/success"  component={PageSuccess} /> */}
+          <Route path='/registerSuccess' component={PageRegisterSuccess} />
           <Route path="/privacy-policy" component={PagePrivacy} />
           <Route path="/terms-of-use" component={PageTerms} />
         </Switch>

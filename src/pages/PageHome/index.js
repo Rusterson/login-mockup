@@ -1,6 +1,6 @@
 import React from 'react'
-import Home from '../../../components/Home'
-import Wrapper from '../../../components/Wrapper';
+import Home from '../../components/Home'
+import Wrapper from '../../components/Wrapper';
 
 function PageHome(){
   return(

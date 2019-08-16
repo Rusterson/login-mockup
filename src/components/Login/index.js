@@ -3,8 +3,9 @@ import styles from "./login.module.css";
 import { ReactComponent as Pass } from "../../assets/icons/pass.svg";
 import { ReactComponent as User } from "../../assets/icons/user.svg";
 import { Link, withRouter } from "react-router-dom";
-import useFormValidation from "./useFormValidation";
-import { login } from "./auth";
+import useFormValidation from "../../services/useFormValidation";
+import { login } from "../../services/auth";
+import API from "../../services/api";
 
 const INITIAL_STATE = {
   email: "",
@@ -32,39 +33,53 @@ function Login(props) {
       error.password = "Password must be at least 8 characters";
       setErrors(error);
     } else {
-      api();
+      // api();
+      console.log("Send ");
+      send();
     }
   }
 
-  async function api() {
-    fetch("https://reqres.in/api/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(
-        values
-        // email: "eve.holt@reqres.in",
-        // password: "cityslicka"
-      )
-    })
-      .then(function(res) {
-        return res.json();
-      })
-      .then(
-        await function(data) {
-          if (data.token) {
-            login(data.token);
-            props.history.push("/success");
-          }
-          if (data.error) {
-            error.api = "*" + data.error;
-            setErrors(error);
-          }
-        }
-      )
-      .catch(function(error) {});
+  async function send() {
+    console.log(values);
+    try {
+      const resp = await API.post("/users/login", values);
+      login(resp.data.token);
+      props.history.push("/success");
+    } catch (error) {
+      setErrors(error);
+      // error.api = "*" + resp.data.error;
+    }
   }
+
+  // async function api() {
+  //   fetch("https://reqres.in/api/login", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json"
+  //     },
+  //     body: JSON.stringify(
+  //       values
+  //       // email: "eve.holt@reqres.in",
+  //       // password: "cityslicka"
+  //     )
+  //   })
+  //     .then(function(res) {
+  //       return res.json();
+  //     })
+  //     .then(
+  //       await function(data) {
+  //         if (data.token) {
+  //           login(data.token);
+  //           props.history.push("/success");
+  //         }
+  //         if (data.error) {
+  //           error.api = "*" + data.error;
+  //           setErrors(error);
+  //         }
+  //       }
+  //     )
+  //     .catch(function(error) {});
+  // }
 
   return (
     <div className={styles.wrapper}>

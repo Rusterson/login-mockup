@@ -21,6 +21,7 @@
   color: #0377a1;
   font-size: 1.4rem;
   margin: 5% 0 0;
+  position: relative;
 }
 
 .field label {
@@ -77,12 +78,69 @@
   box-shadow: -2px 2px 1px 1px #69696926;
 }
 
-.wrapper span {
+.link {
   font-size: 0.9rem;
   color: #696969;
 }
 
-.wrapper span a {
+.link a {
   text-decoration: underline;
   color: #01acea;
+}
+
+/* Tooltips wrapper */
+.icon {
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+}
+
+.tooltips {
+  display: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.9rem;
+  color: #000000;
+  position: absolute;
+  background: #ffffff;
+  text-align: right;
+  padding: 12px 9px 12px 40px;
+  height: auto;
+  width: auto;
+  border-radius: 5px;
+  left: 10%;
+  border: 1px solid rgba(0, 0, 0, 0.58);
+  bottom: -45px;
+  box-shadow: 3px 5px 5px 0 rgba(129, 129, 129, 0.3);
+}
+
+.tooltips::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -9px;
+  left: 9px;
+  /*   margin-left:-8px; */
+  height: 0;
+  width: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 9px solid rgba(0, 0, 0, 0.58);
+}
+
+.tooltips::after {
+  z-index: 1;
+  content: "";
+  display: block;
+  position: absolute;
+  top: -8px;
+  left: 9px;
+  /*   margin-left:-8px; */
+  height: 0;
+  width: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 9px solid #ffffff;
 }

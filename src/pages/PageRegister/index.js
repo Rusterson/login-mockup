@@ -1,6 +1,6 @@
 import React from 'react'
-import Wrapper from '../../../components/Wrapper'
-import Register from '../../../components/Register'
+import Wrapper from '../../components/Wrapper'
+import Register from '../../components/Register'
 
 function PageRegister(){
   return(

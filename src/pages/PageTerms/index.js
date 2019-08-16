@@ -1,5 +1,5 @@
 import React from "react";
-import Terms from "../../../components/Terms";
+import Terms from "../../components/Terms";
 
 function PageTerms() {
   return (
