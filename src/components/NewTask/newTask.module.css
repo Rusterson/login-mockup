@@ -1,17 +1,18 @@
-.wrapper {
-  width: 85vw;
-  height: 85vh;
+.wrapper input {
+  position: relative;
+  background: #0000000a;
+  border: 1px solid #5fcace;
+  color: #696969;
+  font-size: 1.4rem;
+  padding-left: 10px;
+  padding-right: 20px;
+  /* width: 100%; */
 }
 
-.title {
-  color: #52ebd2;
-  font-size: 2.5rem;
-}
-
-.title em {
-  text-decoration: underline;
-  font-style: normal;
-  color: aquamarine;
+.wrapper input:focus {
+  outline: none;
+  border-color: #5fcace;
+  box-shadow: 0 0 1px 1px #52ebd2;
 }
 
 .buttons {
@@ -19,6 +20,8 @@
 }
 
 .buttons button {
+  border-radius: 5px;
+  opacity: .5;
   width: 100px;
   height: auto;
   padding: 0 10px;
@@ -33,8 +36,8 @@
   outline: 0px;
 }
 .buttons button:hover {
-  background: radial-gradient(#01acea75, #56efd175);
+  opacity: 1;
+  background: radial-gradient(#4cabce63, #56efd175);
   transform: translate3d(2px, -1px, 0);
   box-shadow: -1px 1px 1px 1px #69696926;
 }
-

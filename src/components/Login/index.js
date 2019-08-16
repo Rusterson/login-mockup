@@ -51,36 +51,6 @@ function Login(props) {
     }
   }
 
-  // async function api() {
-  //   fetch("https://reqres.in/api/login", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json"
-  //     },
-  //     body: JSON.stringify(
-  //       values
-  //       // email: "eve.holt@reqres.in",
-  //       // password: "cityslicka"
-  //     )
-  //   })
-  //     .then(function(res) {
-  //       return res.json();
-  //     })
-  //     .then(
-  //       await function(data) {
-  //         if (data.token) {
-  //           login(data.token);
-  //           props.history.push("/success");
-  //         }
-  //         if (data.error) {
-  //           error.api = "*" + data.error;
-  //           setErrors(error);
-  //         }
-  //       }
-  //     )
-  //     .catch(function(error) {});
-  // }
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.box}>

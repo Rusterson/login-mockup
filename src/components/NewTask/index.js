@@ -1,17 +1,18 @@
 import React from "react";
-import API from '../../services/api'
+import API from "../../services/api";
+import styles from "./newTask.module.css";
 
 const initValue = {
   description: "",
   completed: false
-}
+};
 
 function NewTask() {
   const [values, setValues] = React.useState(initValue);
 
   function handleChange(e) {
     e.preventDefault();
-    setValues({[e.target.name]:e.target.value});
+    setValues({ [e.target.name]: e.target.value });
   }
 
   function handleClick(e) {
@@ -19,19 +20,22 @@ function NewTask() {
     setValues(initValue);
   }
 
-  function handleSubmit(e){
-    e.preventDefault()
-    console.log('va',values)
-    API.post('/tasks',values).then(res =>{
-      console.log(res)
-    })
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log("va", values);
+    API.post("/tasks", values)
+      .then(res => {
+        console.log(res);
+        setValues(initValue);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 
-  
-
   return (
-    <div>
-      <form action="">
+    <div className={styles.wrappers}>
+      <form id="description" onSubmit={handleSubmit}>
         <input
           name="description"
           value={values.description}
@@ -40,10 +44,14 @@ function NewTask() {
           type="text"
         />
       </form>
-      <button type='button' onClick={handleSubmit} >Add</button>
-      <button type="button" onClick={handleClick}>
-        Clean
-      </button>
+      <div className={styles.buttons}>
+        <button form="description" type="submit">
+          Add
+        </button>
+        <button type="button" onClick={handleClick}>
+          Clean
+        </button>
+      </div>
     </div>
   );
 }

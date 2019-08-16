@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./register.module.css";
 import { ReactComponent as Tips } from "../../assets/icons/tips.svg";
 import { Link, withRouter } from "react-router-dom";
+import API from "../../services/api";
 
 const initState = {
   name: "",
@@ -12,11 +13,11 @@ const initState = {
 
 function Register(props) {
   const [values, setValues] = React.useState(initState);
-  const [tools, setTools] = React.useState({display:'none'})
+  const [tools, setTools] = React.useState({ display: "none" });
 
   const isMatch = values.password === values.repPassword;
 
-  const checkBox = React.useRef(null)
+  const checkBox = React.useRef(null);
 
   const handleChange = e => {
     e.preventDefault();
@@ -25,15 +26,23 @@ function Register(props) {
 
   const handleSubmit = e => {
     e.preventDefault();
-    setValues(initState);
-    checkBox.current.checked = false
+    checkBox.current.checked = false;
     let send = {
       name: values.name,
       email: values.email,
       password: values.password,
-      age: '0'
-    }
-    props.history.push('/registerSuccess')
+      age: "0"
+    };
+    API.post("/users", send)
+      .then(res => {
+        console.log(res.status);
+
+        setValues(initState);
+        props.history.push("/registerSuccess");
+      })
+      .catch(err => {
+        console.error(err);
+      });
   };
 
   const handleValidity = e => {
@@ -44,7 +53,6 @@ function Register(props) {
       setTools({ display: "block" });
     }
   };
-
 
   return (
     <div className={styles.wrapper}>
@@ -115,7 +123,13 @@ function Register(props) {
           </span>
         </div>
         <div className={styles.fieldTerms}>
-          <input ref={checkBox} required name="terms" form="register" type="checkbox" />
+          <input
+            ref={checkBox}
+            required
+            name="terms"
+            form="register"
+            type="checkbox"
+          />
           <label form="register" htmlFor="terms">
             I read and agree to the <Link to="/terms-of-use">Terms of Use</Link>{" "}
             and <Link to="/privacy-policy">Privacy Policy</Link>.
